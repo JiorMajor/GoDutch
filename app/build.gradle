@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: "androidx.navigation.safeargs"
+
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -38,7 +41,17 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:$versions.lifecycle"
 
     // Navigation
-
     implementation "android.arch.navigation:navigation-fragment:$versions.navigation"
     implementation "android.arch.navigation:navigation-ui:$versions.navigation"
+
+    // Room
+    implementation "android.arch.persistence.room:runtime:$versions.room"
+    annotationProcessor "android.arch.persistence.room:compiler:$versions.room"
+
+    // Dagger
+    implementation "com.google.dagger:dagger-android:$versions.dagger"
+    implementation "com.google.dagger:dagger-android-support:$versions.dagger" // if you use the support libraries
+    annotationProcessor "com.google.dagger:dagger-android-processor:$versions.dagger"
+
+//    implementation 'androidx.core:core-ktx:1.0.0-alpha1'
 }

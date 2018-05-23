@@ -2,15 +2,18 @@
 
 buildscript {
     ext {
-        kotlin_version = "1.2.30"
+        kotlin_version = "1.2.41"
     }
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0-alpha14'
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha15'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        //safe-args
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha01"
+
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -42,4 +45,6 @@ versions.test_runner = "1.0.2"
 versions.espresso = "3.0.2"
 versions.appVersionCode = 1
 versions.appVersionName = "1.0.0"
+versions.room = "1.1.0"
+versions.dagger = "2.16"
 ext.versions = versions

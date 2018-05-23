@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/launcher_home">
+
+    <fragment
+        android:id="@+id/launcher_home"
+        android:name="com.chanpyaeaung.godutch.ui.bills.BillsFragment"
+        android:label="@string/navigation_title_bills"
+        tools:layout="@layout/bills_fragment" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.chanpyaeaung.godutch.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+
+</navigation>
